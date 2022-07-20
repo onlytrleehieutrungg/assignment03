@@ -1,0 +1,75 @@
+﻿@model IEnumerable<DataAccess.Models.OrderDetail>
+@using Microsoft.AspNetCore.Http;
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Order Details</h1>
+<form>
+    <input name="orderid" value="@Model.First().OrderId" hidden="hidden" />
+    <input type="submit" value="Create New" class="btn btn-success" asp-action="Create" asp-controller="OrderDetails" />
+</form>
+@foreach (var item in Model)
+{
+    <div>
+        <h4>Order</h4>
+
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.OrderId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(modelItem => item.OrderId)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ProductId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(modelItem => item.ProductId)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Quantity)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.UnitPrice)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(modelItem => item.UnitPrice)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Discount)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(modelItem => item.Discount)
+            </dd>
+            <dt>
+                @Html.ActionLink("Edit", //Link text
+                 "Edit", //Action Method Name
+                 "OrderDetails", //Controller Name
+                  new { ordid = item.OrderId, proid = item.ProductId }, //Route value
+                 null //htmlArguments
+                 )|
+                @Html.ActionLink("Details", //Link text
+                 "Details", //Action Method Name
+                 "OrderDetails", //Controller Name
+                  new { ordid = item.OrderId, proid = item.ProductId }, //Route value
+                 null //htmlArguments
+                 )|
+                @Html.ActionLink("Delete", //Link text
+                 "Delete", //Action Method Name
+                 "OrderDetails", //Controller Name
+                  new { ordid = item.OrderId, proid = item.ProductId }, //Route value
+                 null //htmlArguments
+                 )
+
+            </dt>
+        </dl>
+    </div>
+}
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
