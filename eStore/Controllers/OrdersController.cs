@@ -68,7 +68,22 @@ namespace eStore.Controllers
         }
 
         // GET: OrdersController/Create
-        public ActionResult Create() => View();
+        public ActionResult Create()
+        {
+            string LoginEmail = HttpContext.Session.GetString("Email");
+            if (LoginEmail == null)
+            {
+                TempData["Error"] = "Please login!";
+                return Redirect("../Login/Index");
+            }
+            var orderList = orderRepository.GetOrders();
+            var orderLast = orderList.Last();
+            var order = new Order()
+            {
+                OrderId = orderLast.OrderId + 1
+            };
+            return View(order);
+        } //=> View();
 
         // POST: OrdersController/Create
         [HttpPost]
