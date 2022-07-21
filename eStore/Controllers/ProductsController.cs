@@ -46,7 +46,21 @@ namespace eStore.Controllers
         }
 
         // GET: ProductController/Create
-        public ActionResult Create() => View();
+        public ActionResult Create() //=> View();
+        {
+            string LoginEmail = HttpContext.Session.GetString("Email");
+            if (LoginEmail == null)
+            {
+                TempData["Error"] = "Please login!";
+                return Redirect("../Login/Index");
+            }
+            var proList = productRepository.GetProducts();
+            var productLast = proList.Last();
+            var product = new Product(){
+                ProductId = productLast.ProductId + 1
+            };
+            return View(product);
+        }
 
         // POST: ProductController/Create
         [HttpPost]

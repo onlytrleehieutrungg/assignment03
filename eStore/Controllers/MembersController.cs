@@ -46,7 +46,22 @@ namespace eStore.Controllers
         }
 
         // GET: MembersController/Create
-        public ActionResult Create() => View();
+        public ActionResult Create()
+        {
+            string LoginEmail = HttpContext.Session.GetString("Email");
+            if (LoginEmail == null)
+            {
+                TempData["Error"] = "Please login!";
+                return Redirect("../Login/Index");
+            }
+            var memberList = memberRepository.GetMembers();
+            var memberLast = memberList.Last();
+            var member = new Member()
+            {
+                MemberId = memberLast.MemberId +1
+            };
+            return View(member);
+        } //=> View();
 
         // POST: MembersController/Create
         [HttpPost]

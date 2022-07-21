@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\Ass03Solution\\eStore\\eStore.csproj": {}
+    "D:\\study\\prn221\\assignment03\\eStore\\eStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\Ass03Solution\\DataAccess\\DataAccess.csproj": {
+    "D:\\study\\prn221\\assignment03\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Ass03Solution\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\study\\prn221\\assignment03\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\Ass03Solution\\DataAccess\\DataAccess.csproj",
+        "projectPath": "D:\\study\\prn221\\assignment03\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\Ass03Solution\\DataAccess\\obj\\",
+        "outputPath": "D:\\study\\prn221\\assignment03\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -84,21 +84,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Admin\\Desktop\\Ass03Solution\\eStore\\eStore.csproj": {
+    "D:\\study\\prn221\\assignment03\\eStore\\eStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Ass03Solution\\eStore\\eStore.csproj",
+        "projectUniqueName": "D:\\study\\prn221\\assignment03\\eStore\\eStore.csproj",
         "projectName": "eStore",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\Ass03Solution\\eStore\\eStore.csproj",
+        "projectPath": "D:\\study\\prn221\\assignment03\\eStore\\eStore.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\Ass03Solution\\eStore\\obj\\",
+        "outputPath": "D:\\study\\prn221\\assignment03\\eStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -116,8 +116,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Admin\\Desktop\\Ass03Solution\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\Ass03Solution\\DataAccess\\DataAccess.csproj"
+              "D:\\study\\prn221\\assignment03\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\study\\prn221\\assignment03\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -175,7 +175,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
