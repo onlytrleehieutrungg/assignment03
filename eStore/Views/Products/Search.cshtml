@@ -9,16 +9,17 @@
 
 <form asp-action="Search">
     <div>
-        <input type="text" name="name" class="form-control" value="@ViewBag.Search" style="width: 10em; float:left;" />
-        <select name="price" style="height: 2.5em;">
+        Product Name: <input type="text" name="name" value="@ViewBag.Search" placeholder="Enter Product Name" style="width: 12em;height: 2em;" />
+        Price range: <select name="price" style="height: 2em;">
             <option value="@ViewBag.Price" hidden="hidden" selected="">@ViewBag.Price</option>
-            <option value="<1000$"> <1000$ </option>
+            <option value="<1000$"> 1000$ </option>
             <option value="1000-5000$">1000-5000$</option>
             <option value="5000-10000$">5000-10000$</option>
             <option value=">10000$"> >10000$ </option>
         </select>
-        <input type="submit" value="Find" class="btn btn-light" />
-        <input type="reset" value="Reset" class="btn btn-light" />
+        <input type="submit" value="Find" class="btn btn-light" style="background-color : orange"/>
+        <input type="reset" value="Reset" class="btn btn-light" style="background-color : lightgray"/>
+        
     </div>
     
 </form>
